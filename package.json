@@ -4,7 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/src/.*\\.spec\\.ts$"
   },
   "repository": {
     "type": "git",
