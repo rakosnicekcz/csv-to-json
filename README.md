@@ -7,7 +7,7 @@
 CSV look like:
 
 |name|age|sex|address|
-|:----------:|:-------:|:---:|:----:|:---:|
+|:----------:|:-------:|:---:|:----:|
 |John|18|M|NY, Brooklyn|
 |Alice|22|F|Britan, Newington|
 
