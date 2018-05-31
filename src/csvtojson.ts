@@ -1,5 +1,5 @@
 
-export const csvToJson = (csvText: any, delimiter: any = findDelimiter(csvText)) => {
+export const csvToJson = (csvText: string, delimiter: any = findDelimiter(csvText)) => {
     const rows = rowsSpliter(csvText);
     return rowsRider(rows, delimiter);
 };
