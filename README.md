@@ -22,9 +22,7 @@ Alice,22,F,"Britan, Newington"
 simply call function csvToJson() with at least one parametr
 
 ```TypeScript
-const csvText = 'name,age ,sex,adderss\n
-John,18,M,"NY, Brooklyn"\n
-Alice,22,F,"Britan, Newington"';
+const csvText = 'name,age ,sex,adderss\nJohn,18,M,"NY, Brooklyn"\nAlice,22,F,"Britan, Newington"';
 const delimiter = ',';
 
 //wit delimiter
