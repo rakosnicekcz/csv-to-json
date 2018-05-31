@@ -1,33 +1,34 @@
 
-export const csvToJson = (csvText: string, delimiter: any = findDelimiter(csvText)) => {
+export const csvToJson = (csvText, delimiter = findDelimiter(csvText)) => {
     const rows = rowsSpliter(csvText);
     return rowsRider(rows, delimiter);
 };
 
-export const rowsSpliter = (csvText: any) => {
-    return csvText.split(/[\r\n]+/).filter((v: any) => {
+export const rowsSpliter = (csvText) => {
+    return csvText.split(/[\r\n]+/).filter((v) => {
         return v;
     });
 };
 
-export const findDelimiter = (csvText: any) => {
+export const findDelimiter = (csvText) => {
     const index = csvText.search(/[,;| ]/);
     return csvText[index];
 };
 
-export const rowsRider = (rows: any, delimiter: any) => {
+export const rowsRider = (rows, delimiter) => {
     const fields = rows[0].split(delimiter);
-    const objArray = [];
+    const objArray: any = [];
     for (let i = 1, len = rows.length; i < len; i++) {
-        objArray.push(charRider(rows[i] += delimiter, fields, delimiter));
+        const row = rows[i] += delimiter;
+        objArray.push(charRider(row, fields, delimiter));
     }
     return objArray;
 };
 
-export const charRider = (row: any, fields: any, delimiter: any) => {
-    let castedValue: any = '';
+export const charRider = (row, fields, delimiter) => {
+    let castedValue = '';
     let stringDetection = 0;
-    const obj: any = {};
+    const obj = {};
     let indexCalculator = 0;
     for (const char of row) {
         if (char === '"') {
@@ -52,6 +53,6 @@ export const charRider = (row: any, fields: any, delimiter: any) => {
     return obj;
 };
 
-export const getCastedValue = (value: any) => {
+export const getCastedValue = (value) => {
     return value === '' ? null : isNaN(value) ? value : +value;
 };
