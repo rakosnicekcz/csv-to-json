@@ -1,7 +1,7 @@
 {
   "name": "csv-to-json",
   "version": "2.0.1",
-  "description": "easy csv to convertor in TypeScript, can be used as a module",
+  "description": "easy csv to converter in TypeScript, can be used as a module",
   "main": "lib/csvtojson.js",
   "module": "lib/csvtojson.js",
   "typings": "lib/csvtojson.d.ts",
