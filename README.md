@@ -50,3 +50,11 @@ It will generate JSON like this:
  }
 ]
 ```
+
+## Install npm
+
+### link on **NPM**: [csvtojson-converter](https://www.npmjs.com/package/csvtojson-converter?activeTab=dependencies)
+
+```cmd
+npm install csvtojson-converter -D
+```
