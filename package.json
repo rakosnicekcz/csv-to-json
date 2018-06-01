@@ -1,10 +1,14 @@
 {
   "name": "csv-to-json",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.1",
+  "description": "easy csv to convertor in TypeScript, can be used as a module",
+  "main": "lib/csvtojson.js",
+  "module": "lib/csvtojson.js",
+  "typings": "lib/csvtojson.d.ts",
   "scripts": {
-    "test": "jest"
+    "build": "tsc && npm run uglify",
+    "test": "jest",
+    "uglify": "uglifyjs lib/csvtojson.js --compress --mangle --output lib/csvtojson.min.js"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -20,8 +24,17 @@
     "type": "git",
     "url": "git+https://github.com/rakosnicekcz/csv-to-json.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "csv",
+    "to",
+    "json",
+    "TypeScript",
+    "JavaScript",
+    "csvToJson",
+    "covertor",
+    "parser"
+  ],
+  "author": "Hůlek Matěj",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rakosnicekcz/csv-to-json/issues"
@@ -31,6 +44,7 @@
     "@types/jest": "^22.2.3",
     "jest": "^23.1.0",
     "ts-jest": "^22.4.6",
-    "typescript": "^2.8.4"
+    "typescript": "^2.8.4",
+    "uglify-js": "^3.3.28"
   }
 }
