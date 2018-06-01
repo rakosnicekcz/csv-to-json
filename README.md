@@ -1,6 +1,6 @@
 # CSV to JSON converter
 
-#### simply and fast converter that can by used as module
+#### simply and fast converter that can be used as module
 
 ## Description
 
